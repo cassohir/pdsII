@@ -27,6 +27,8 @@ void leia_sequencia_palavras(std::vector<std::string> &vec)
  *
  */
 
+// testando commit
+
 void leia_conjunto_segredos(std::set<std::string> &segredos)
 {
   std::string conjunto_segredo;
@@ -34,7 +36,7 @@ void leia_conjunto_segredos(std::set<std::string> &segredos)
   {
     if (conjunto_segredo.find('*') != std::string::npos)
     {
-        }
+    }
     else
     {
       segredos.insert(conjunto_segredo);
