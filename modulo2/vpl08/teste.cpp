@@ -2,27 +2,34 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <cctype>
 #include <fstream>
+#include <clocale>
 #include <algorithm>
 
-void leia_sequencia_palavras(std::vector<std::string> &vec)
+void leia_conjunto_segredos(std::set<std::string> &segredos)
 {
-  std::ifstream inputText("in.txt");
-  std::ofstream outputText;
+  std::string conjunto_segredo;
 
-  outputText.open("out.txt", std::ios::app);
-  for (std::string str : vec)
+  while (std::cin >> conjunto_segredo)
   {
-    outputText << str << std::endl;
+    for (auto &c : conjunto_segredo)
+    {
+      if (!std::isalnum(conjunto_segredo[c]))
+      {
+        segredos.insert(conjunto_segredo);
+      }
+    }
   }
+}
+void testa_leitura_segredos()
+{
+  std::set<std::string> segredos;
+  leia_conjunto_segredos(segredos);
+  std::cout << segredos.size() << std::endl;
 }
 
 int main()
 {
-  std::vector<std::string> texto;
-  leia_sequencia_palavras(texto);
-  for (std::string str : texto)
-  {
-    std::cout << str << std::endl;
-  }
+  testa_leitura_segredos();
 }

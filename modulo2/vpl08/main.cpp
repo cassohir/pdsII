@@ -2,7 +2,9 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <cctype>
 #include <fstream>
+#include <clocale>
 #include <algorithm>
 
 /**
@@ -32,15 +34,9 @@ void leia_sequencia_palavras(std::vector<std::string> &vec)
 void leia_conjunto_segredos(std::set<std::string> &segredos)
 {
   std::string conjunto_segredo;
+
   while (std::cin >> conjunto_segredo)
   {
-    if (conjunto_segredo.find('*') != std::string::npos)
-    {
-    }
-    else
-    {
-      segredos.insert(conjunto_segredo);
-    }
   }
 }
 
