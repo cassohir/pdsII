@@ -27,7 +27,7 @@ public:
    */
   Celular(std::string modelo, double valor)
   {
-    }
+  }
 
   /**
    * \brief informa o valor do telefone.
