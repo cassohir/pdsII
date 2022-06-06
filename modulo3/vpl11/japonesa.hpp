@@ -1,5 +1,6 @@
 #ifndef JAPONESA_H
 #define JAPONESA_H
+#include <sstream>
 
 #include "produto.hpp"
 
@@ -8,8 +9,9 @@
  * de um produto do tipo Comida Japonesa.
  *
  */
-class Japonesa : public Produto {
- public:
+class Japonesa : public Produto
+{
+public:
   /**
    * @brief Construtor padrao que inicializa todas as variaveis da classe.
    *
@@ -20,7 +22,7 @@ class Japonesa : public Produto {
    * @param qtd Quantidade do item. Ex: 3x Combo 1
    * @param valor Valor unitario do item escolhido
    */
-  Japonesa(const std::string& combinado,
+  Japonesa(const std::string &combinado,
            int sushi,
            int temaki,
            int hots,
@@ -35,8 +37,11 @@ class Japonesa : public Produto {
    */
   std::string descricao() const override;
 
- private:
-  // TODO: Declare aqui as variaveis da classe. Note que as variaveis quantidade
+private:
+  std::string combinado;
+  int sushi;
+  int temaki;
+  int hots;
   // (qtd) e valor ja sao herdadas de Produto
 };
 #endif

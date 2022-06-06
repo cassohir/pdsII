@@ -12,8 +12,9 @@
  * @brief Classe responsavel pelo armazenamento e gerenciamento das informacoes
  * de um pedido.
  */
-class Pedido {
- public:
+class Pedido
+{
+public:
   /**
    * @brief Destrutor da classe.
    *
@@ -25,7 +26,7 @@ class Pedido {
    * @param p Ponteiro do tipo base Produto.
    * Pode ser da classe derivada: Pizza, Hamburguer ou Japonesa.
    */
-  void adicionaProduto(Produto* p);
+  void adicionaProduto(Produto *p);
 
   /**
    * @brief Calcula o valor total do pedido.
@@ -45,14 +46,14 @@ class Pedido {
    *
    * @param endereco Endereco de entrega
    */
-  void setEndereco(const std::string& endereco);
+  void setEndereco(const std::string &endereco);
 
- private:
+private:
   /**
    * @brief Lista de produtos do pedido. Pode ser do tipo Pizza, Hamburguer
    * ou Japonesa.
    */
-  std::list<Produto*> m_produtos;
+  std::list<Produto *> m_produtos;
 
   /**
    * @brief Endereco de entrega do pedido

@@ -1,5 +1,6 @@
 #ifndef HAMBURGUER_H
 #define HAMBURGUER_H
+#include <sstream>
 
 #include "produto.hpp"
 
@@ -8,8 +9,9 @@
  * de um produto do tipo Hamburguer.
  *
  */
-class Hamburguer : public Produto {
- public:
+class Hamburguer : public Produto
+{
+public:
   /**
    * @brief Construtor padrao que inicializa todas as variaveis da classe.
    *
@@ -18,7 +20,7 @@ class Hamburguer : public Produto {
    * @param qtd Quantidade de hamburgueres
    * @param valor_unitario Valor unitario do hamburguer
    */
-  Hamburguer(const std::string& tipo,
+  Hamburguer(const std::string &tipo,
              bool artesanal,
              int qtd,
              float valor_unitario);
@@ -30,8 +32,10 @@ class Hamburguer : public Produto {
    */
   std::string descricao() const override;
 
- private:
-  // TODO: Declare aqui as variaveis da classe. Note que as variaveis quantidade
+private:
+  std::string tipo;
+  bool artesanal : 1;
+
   // (qtd) e valor ja sao herdadas de Produto
 };
 #endif

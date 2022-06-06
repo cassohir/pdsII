@@ -1,11 +1,13 @@
 #include "produto.hpp"
 
-int Produto::getQtd() const {
-  // TODO: Implemente este metodo
-  return 0;
+int Produto::getQtd() const
+{
+
+  return this->m_qtd;
 }
 
-float Produto::getValor() const {
-  // TODO: Implemente este metodo
-  return 0;
+float Produto::getValor() const
+{
+
+  return this->m_valor_unitario;
 }
