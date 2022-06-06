@@ -48,6 +48,8 @@
     "bit": "cpp",
     "ctime": "cpp",
     "set": "cpp",
-    "iomanip": "cpp"
+    "iomanip": "cpp",
+    "list": "cpp",
+    "map": "cpp"
   }
 }

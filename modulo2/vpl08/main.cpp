@@ -13,11 +13,6 @@
  */
 void leia_sequencia_palavras(std::vector<std::string> &vec)
 {
-  std::string sequencia_palavra;
-  while (std::cin >> sequencia_palavra)
-  {
-    vec.push_back(sequencia_palavra);
-  }
 }
 
 /**
