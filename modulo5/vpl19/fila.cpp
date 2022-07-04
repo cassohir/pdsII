@@ -1,30 +1,36 @@
 #include "fila.h"
 
-struct No {
+struct No
+{
   int chave;
-  No* proximo;
+  No *proximo;
 };
 
-Fila::Fila() {
+Fila::Fila()
+{
+}
+
+void Fila::Inserir(int k)
+{
   // TODO
 }
 
-void Fila::Inserir(int k) {
+void Fila::RemoverPrimeiro()
+{
   // TODO
 }
 
-void Fila::RemoverPrimeiro() {
-  // TODO
-}
-
-int Fila::primeiro() const {
+int Fila::primeiro() const
+{
   return 0; // TODO
 }
 
-int Fila::ultimo() const {
+int Fila::ultimo() const
+{
   return 0; // TODO
 }
 
-int Fila::tamanho() const {
+int Fila::tamanho() const
+{
   return 0; // TODO
 }
